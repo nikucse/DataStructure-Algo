@@ -1,6 +1,196 @@
-	Data Structure
+	List Data Structure
 1. Array
 2. Linked List
 3. Stack (Abstract Data Structure)
 4. Queue (Abstract Data Structure)
 
+========>  What is DataStructure
+
+A Data Structure(DS) is a way to store and organizing data in computer so that it can be used 
+effectively.
+
+========>  Why Data Structures?
+
+They are essential ingredients in creating fast and powerful algorithms.
+They help to manage and organize data.
+They make code cleaner and easier to understand.
+
+========>  ADT  vs Data Structure
+
+An abstract data type(ADT) is an abstraction of a data structure which provides only the interface 
+to which a data structure must adhere to.
+The interface does not give any specific details about how something should be implemented or 
+in what programming language.
+
+Examples:-
++++++++++++++++++++++++++++++++
+ADT				Implementation
++++++++++++++++++++++++++++++++
+List 			Dynamic Array,LinkedList
+Queue			Linked List based Queue,Array based Queue,Stack based Queue
+Map				Tree Map,Hash Map /Hash Table
+Vehicle			Golf Cart, Bicycle,Smart Car
+
+
+========>  List as Abstract Data Type
+
+List is a collection of objects.
+1. Store a given number of element of given data-type.
+2. Write / Modify element at a position.
+3. Read element at a position.
+
+Array give all these features. That is a Static list.
+int a[10];
+a[i]=2;
+print A[i]
+
+-- Create Dynamic array for below operations:-
+1. empty  if list has size 0
+2. insert  O(n)
+3. remove  O(n)
+4. count
+5. Read/Modify element at a position.  O(1)
+6. specify data-type
+
+When array is full.Create a new larger array, copy previous array into the new array free the 
+memory for the previous array. new array size should be double of previous array.
+
+=================================================>   Java Arrays
+
+An array is a collection of similar type of elements which have a contiguous memory location.
+
+Java array is an object which contains elements of a similar data type. Additionally, The
+elements of an array are stored in a contiguous memory location. It is a data structure where we store similar elements. 
+We can store only a fixed set of elements in a Java array.
+
+Array in Java is index-based, the first element of the array is stored at the 0th index, 2nd element is stored on 1st index and so on.
+
+In Java, array is an object of a dynamically generated class. Java array inherits the Object class, and implements the Serializable 
+as well as Cloneable interfaces. We can store primitive values or objects in an array in Java. Like C/C++, we can also create single
+dimentional or multidimentional arrays in Java.
+
+#  Advantages
+1. Code Optimization: It makes the code optimized, we can retrieve or sort the data efficiently.
+2. Random access: We can get any data located at an index position.
+
+#  Disadvantages
+1. Size Limit: We can store only the fixed size of elements in the array. It doesn't grow its size at runtime. To solve this problem,
+collection framework is used in Java which grows automatically.
+
+---->  Types of Array in java
+There are two types of array.
+
+1. Single Dimensional Array
+2. Multidimensional Array (Array of Array)
+
+#  Single Dimensional Array in Java
+Syntax to Declare an Array in Java
+
+dataType[] arr; (or)  
+dataType []arr; (or)  
+dataType arr[];
+
+Instantiation of an Array in Java
+arrayRefVar=new datatype[size];  
+
+int a[]={33,3,4,5};//declaration, instantiation and initialization  
+
+#  Multidimensional Array in Java
+In such case, data is stored in row and column based index (also known as matrix form).
+Syntax to Declare Multidimensional Array in Java
+
+dataType[][] arrayRefVar; (or)  
+dataType [][]arrayRefVar; (or)  
+dataType arrayRefVar[][]; (or)  
+dataType []arrayRefVar[];   
+
+Example to instantiate Multidimensional Array in Java
+
+int[][] arr=new int[3][3];//3 row and 3 column 
+
+=================================================>   Arrays in JavaScript
+
+In JavaScript, array is a single variable that is used to store different elements. It is often used when we want to store list of 
+elements and access them by a single variable. Unlike most languages where array is a reference to the multiple variable, in JavaScript 
+array is a single variable that stores multiple elements.
+
+let arr = [];
+let arr = {1,2,3,4,5};
+
+#  Methods	Description
+1. concat()	It returns a new array object that contains two or more merged arrays.
+2. copywithin()	It copies the part of the given array with its own elements and returns the modified array.
+3. entries()	It creates an iterator object and a loop that iterates over each key/value pair.
+4. every()	It determines whether all the elements of an array are satisfying the provided function conditions.
+5. flat()	It creates a new array carrying sub-array elements concatenated recursively till the specified depth.
+6. flatMap()	It maps all array elements via mapping function, then flattens the result into a new array.
+7. fill()	It fills elements into an array with static values.
+8. from()	It creates a new array carrying the exact copy of another array element.
+9. filter()	It returns the new array containing the elements that pass the provided function conditions.
+10.find()	It returns the value of the first element in the given array that satisfies the specified condition.
+11.findIndex()	It returns the index value of the first element in the given array that satisfies the specified condition.
+12.forEach()	It invokes the provided function once for each element of an array.
+13.includes()	It checks whether the given array contains the specified element.
+14.indexOf()	It searches the specified element in the given array and returns the index of the first match.
+15.isArray()	It tests if the passed value ia an array.
+16.join()	It joins the elements of an array as a string.
+17.keys()	It creates an iterator object that contains only the keys of the array, then loops through these keys.
+18.lastIndexOf()	It searches the specified element in the given array and returns the index of the last match.
+19.map()	It calls the specified function for every array element and returns the new array
+20.of()	It creates a new array from a variable number of arguments, holding any type of argument.
+21.pop()	It removes and returns the last element of an array.
+22.push()	It adds one or more elements to the end of an array.
+23.reverse()	It reverses the elements of given array.
+24.reduce(function, initial)	It executes a provided function for each value from left to right and reduces the array to a single value.
+25.reduceRight()	It executes a provided function for each value from right to left and reduces the array to a single value.
+26.some()	It determines if any element of the array passes the test of the implemented function.
+27.shift()	It removes and returns the first element of an array.
+28.slice()	It returns a new array containing the copy of the part of the given array.
+29.sort()	It returns the element of the given array in a sorted order.
+30.splice()	It add/remove elements to/from the given array.
+31.toLocaleString()	It returns a string containing all the elements of a specified array.
+32.toString()	It converts the elements of a specified array into string form, without affecting the original array.
+33.unshift()	It adds one or more elements in the beginning of the given array.
+34.values()	It creates a new iterator object carrying values for each index in the array.
+		
+
+
+======================================================>  LinkedList
+
+When we use arrays,we have some limitations.To be able to understand Linked list well,we need to 
+understand the limitations.Memory is crucial resource and all application is asking for it.
+
+A linked list is a linear data structure, in which the elements are not stored at contiguous memory
+locations. The elements in a linked list are linked using pointers.
+
+Head--_
+______|______      ____________    ____________     ______________
+|_data_|____|--->|_data_|____|--->|_data_|____|--->|_data_| null_|
+
+Address of the head node gives us access of the complete list. (like treasure hunt)
+
+In simple words, a linked list consists of nodes where each node contains a data field and a 
+reference(link) to the next node in the list.
+Example:-
+
+struct Node{
+  dataType data;
+  Node* next; -------> This field only store address.
+}
+
+==========> Array Vs LinkedList
+
+Which one is better ?
+There is no such thing as one data structure is better than another data structure.One data 
+structure is good for one kind of requirement,while another data structure good for another 
+kind of requirement.
+
+                          Array                         Linked List
+1.cost of accesing          O(1)                            O(N)
+an element           (address  + i * 4 )
+2. memory usage    Fixed Size unused memory      No unused memory extra memory for pointer 
+                                                    variables.less Memory
+3. Insert (first)       O(N)                              O(1)
+Insert (middle)         O(N)                              O(N)
+Insert (last)           O(1)                              O(N)
+4. Easy to use          easy                            little complicated in C / C++
